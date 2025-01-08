@@ -8,10 +8,5 @@ import 'package:flutter_flavor/app.dart';
 // flutter run --development
 
 void main() {
-  // Retrieve the environment variable
-  String? environment = Platform.environment['FLUTTER_ENV'];
-
-  // Print the value for debugging
-  print('Environment: $environment');
   runApp(const App(flavor: 'Development'));
 }
