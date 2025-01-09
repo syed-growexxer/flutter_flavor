@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
   final String flavor;
-  const App({super.key, required this.flavor});
+  final String bodyText;
+  const App({super.key, required this.flavor, required this.bodyText});
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +12,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner:  false,
       home: Scaffold(
         appBar: AppBar(title: Text(flavor),),
+        body: Center(child: Text(bodyText),),
       ),
     );
   }
