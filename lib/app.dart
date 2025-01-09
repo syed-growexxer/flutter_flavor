@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class App extends StatelessWidget {
   final String flavor;
-  final String bodyText;
-  const App({super.key, required this.flavor, required this.bodyText});
+  const App({super.key, required this.flavor});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner:  false,
       home: Scaffold(
         appBar: AppBar(title: Text(flavor),),
-        body: Center(child: Text(bodyText),),
+        body: Center(child: Text(dotenv.env['ENVIRONMENT'] ?? "unknown"),),
       ),
     );
   }

@@ -8,5 +8,5 @@ import 'package:flutter_flavor/app.dart';
 
 void main() async{
   await dotenv.load(fileName: ".env.development");
-  runApp(App(flavor: 'Development', bodyText: dotenv.env['ENVIRONMENT'] ?? "unknown",));
+  runApp(const App(flavor: 'Development',));
 }
